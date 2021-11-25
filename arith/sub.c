@@ -2,8 +2,8 @@
 #include <stdio.h>
 int sub(int a,int b)
 {
-    int result =0;
-    result =a-b;
-    return result;
+    int diff =0;
+    diff =a-b;
+    return diff;
     
 }
