@@ -25,7 +25,7 @@ int main(int argc,char const *argv[])
         exit(EXIT_FAILURE);
     
     }  
-    //argv[1]=fd_r;
+    
     read(fd_r,buf,sizeof(buf));              //write on file descripter thru buffer
     
     fd_w=open("fdestn.txt",O_WRONLY | O_CREAT,S_IRUSR|S_IWUSR);
@@ -37,9 +37,9 @@ int main(int argc,char const *argv[])
         exit(EXIT_FAILURE);
     
     }  */
-    //argv[2]=fd_w;
+    
     write(fd_w,buf,sizeof(buf));
-    //printf("argv...%c\n",(char *)argv);
+    
     close(fd_r);
     close(fd_w);
 }
