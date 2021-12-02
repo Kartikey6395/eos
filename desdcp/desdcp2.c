@@ -10,11 +10,17 @@
 int main(int argc,char const *argv[])
 {   
     char buf[50];
-    
+    FILE *f1,*f2;
+    int i;
     int fd_r;                                   //rturn type open()-->int
     int fd_w;
+    for(i=1;i<argc;i++)
+    {
+        //printf("$$ ",argv[i]);
+        f1=argv[i];
+        f2=argv[i+1];
     
-    fd_r=open("source.txt",O_RDWR,S_IRUSR | S_IWUSR);           //file descripter user read write only
+    fd_r=open(f1,O_RDWR,S_IRUSR | S_IWUSR);           //file descripter user read write only
     
    
     
@@ -26,15 +32,15 @@ int main(int argc,char const *argv[])
     
     }  
    
-    fd_w=open("destn.txt",O_WRONLY,S_IRUSR|S_IWUSR);
+    fd_w=open(f2,O_WRONLY,S_IRUSR|S_IWUSR);
     
-    if (fd_r == -1)
+    if (fd_w == -1)
     {
-        fd_w=open("destn.txt",O_CREAT,S_IRUSR|S_IWUSR);
+        fd_w=open(f2,O_CREAT,S_IRUSR|S_IWUSR);
     
     }  
-    if(argv[1]=="destn.txt" && argv[2]=="source.txt")
-    {
+   //if(argv[1]=="dest.txt" && argv[2]=="src.txt")
+    
      do{
     read(fd_r,buf,sizeof(buf));              //write on file descripter thru buffer
      }while(0);
