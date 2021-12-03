@@ -21,7 +21,7 @@ int main(int argc,char const *argv[])
     pipe(fd_1);
     pipe(fd_2);
 
-        // returns two file descriptors-->fd_x[0]:read,fd_x[1]-->write
+        // returns two file descriptors each-->fd_x[0]:read,fd_x[1]-->write
     
 
     

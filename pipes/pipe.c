@@ -5,7 +5,7 @@
 
 int main(int argc,char const *argv[])
 {
-    pid_t id;                   //return of pid from fork
+    pid_t id;                   //has return type of pid from fork
     int fd[2];                      //file descrpter array
     unsigned char buff[30];
 
