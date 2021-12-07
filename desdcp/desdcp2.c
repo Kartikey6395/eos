@@ -41,9 +41,9 @@ int main(int argc,char const *argv[])
     }  
    //if(argv[1]=="dest.txt" && argv[2]=="src.txt")
     
-     do{
+     
     read(fd_r,buf,sizeof(buf));              //write on file descripter thru buffer
-     }while(0);
+     
     
     write(fd_w,buf,sizeof(buf));
     //printf("argv...%c\n",(char *)argv);

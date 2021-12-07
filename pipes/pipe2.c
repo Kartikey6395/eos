@@ -53,7 +53,7 @@ int main(int argc,char const *argv[])
         
         
         printf("parent writing process \n");
-        write(fd_1[1],arr,8);
+        write(fd_1[1],(int *)arr,8);
         
         read(fd_2[0],&result,4);
         printf("parent write done %d\n",result);
