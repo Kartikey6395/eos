@@ -16,7 +16,7 @@ int main(int argc,char const *argv[])
     
     if( id == 0)
     {
-    printf("Child Process-->before exec\n");                    //child
+    printf("Child Process--->before exec\n");                    //child
     execl("/home/ktubuntu/EOS/work/piddemo/pidbin","pidbin",NULL);     //loading getpid prog onto child process
     if (ex == -1)
     {

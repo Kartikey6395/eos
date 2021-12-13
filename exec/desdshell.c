@@ -31,7 +31,7 @@ int main(int argc,char const *argv[])
             printf("desdshell $ ");
         
         }  
-    printf("Child Process-->after exec\n");
+    printf("Child Process--->after exec\n");
     }
 
     else
