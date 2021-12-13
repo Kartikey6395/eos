@@ -8,7 +8,7 @@ pthread_barrier_t init_barrier;
 void *e_prom_thread(void*arg)
 {
     printf("e_prom_thread init start\n");
-    sleep(3);
+    sleep(4);
     pthread_barrier_wait(&init_barrier);
     printf("e_prom_thread init complete\n");
 }
@@ -34,9 +34,10 @@ void *ethern_thread(void*arg)
 void *i2c_thread(void*arg)
 {
     printf("i2c_thread init start\n");
-    sleep(2);
+    sleep(3);
     pthread_barrier_wait(&init_barrier);
     printf("i2c_thread init complete\n");
+
 }
 
 
