@@ -8,7 +8,7 @@ sem_t semCount;
 
 void *inc_thread(void*arg)
 {
-    while(1)
+    while(1)//write
      {   //lock T1
          sem_wait(&semCount);
          count++;
@@ -20,7 +20,7 @@ void *inc_thread(void*arg)
 
 void *dec_thread(void*arg)
 {
-    while(1)
+    while(1)//read
      {   //lock T2
          sem_wait(&semCount);
          count--;
